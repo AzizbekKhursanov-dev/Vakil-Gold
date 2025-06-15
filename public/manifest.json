@@ -1,0 +1,55 @@
+{
+  "name": "Vakil Gold - Zargarlik Boshqaruv Paneli",
+  "short_name": "Vakil Gold",
+  "description": "Zargarlik mahsulotlarini boshqarish uchun professional dastur",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#667eea",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["business", "productivity", "finance"],
+  "lang": "uz",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Mahsulotlar",
+      "short_name": "Items",
+      "description": "Mahsulotlar ro'yxatini ko'rish",
+      "url": "/items",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Hisobotlar",
+      "short_name": "Reports",
+      "description": "Hisobotlar va tahlillar",
+      "url": "/reports",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

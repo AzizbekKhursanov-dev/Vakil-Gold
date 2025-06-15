@@ -1,0 +1,38 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Single user access - simplified rules
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+    
+    // Items collection
+    match /items/{itemId} {
+      allow read, write: if request.auth != null;
+      allow create: if request.auth != null 
+        && request.resource.data.keys().hasAll(['model', 'category', 'weight', 'sellingPrice'])
+        && request.resource.data.weight is number
+        && request.resource.data.sellingPrice is number;
+    }
+    
+    // Branches collection
+    match /branches/{branchId} {
+      allow read, write: if request.auth != null;
+    }
+    
+    // Transactions collection
+    match /transactions/{transactionId} {
+      allow read, write: if request.auth != null;
+    }
+    
+    // Supplier transactions
+    match /supplierTransactions/{transactionId} {
+      allow read, write: if request.auth != null;
+    }
+    
+    // Expenses
+    match /expenses/{expenseId} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
